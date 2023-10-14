@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and login Form</title>
+    <!-- importing fontawesome kit -->
+    <script src="https://kit.fontawesome.com/667417c7ec.js" crossorigin="anonymous"></script>
+
+    <!--    -->
+
+    <!-- Lets add some styling -->
+    <style>
+        body {
+            background: #41092b;
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            min-height: 600px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+nav{
+    position: sticky;
+    background-color:#41092b;
+    color:white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin:0%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #41092b;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-left: 82%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: red;
+  background-color: white;
+}
+
+.sidenav .closebtn a:hover{
+color: white;
+background-color: red;
+}
+.sidenav .closebtn {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+
+}
+.menu{
+    margin-left: 70%;
+}
+    
+nav a{
+    color: white;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-left: 3%;
+
+}
+nav .navbar{
+    cursor: pointer;
+    display: none;
+}
+        
+        .container {
+            background-color: transparent;
+            width: 380px;
+            margin: auto;
+            height: 500px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px black;
+            padding-top: 30px;
+        }
+        
+       
+        
+        .tabs {
+            display: flex;
+            position: relative;
+            top: -25px;
+            justify-content: center;
+            color: rgb(73, 71, 71);
+            height: 25px;
+        }
+        
+        .reg-tab,
+        .login-tab {
+            width: 50%;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            margin: auto 25px;
+            cursor: pointer;
+            background-color: #541b1d;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .reg-tab:hover,
+        .login-tab:hover {
+            color: rgb(10, 51, 98);
+            border-bottom: 4px solid rgb(10, 51, 98);
+        }
+        .active{
+            color: rgb(10, 51, 98);
+            border-bottom: 4px solid rgb(10, 51, 98);
+        }
+        #login-form {
+            display: block;
+            padding-top: 25px;
+        }
+        
+        form {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            margin: 15px auto;
+            align-items: center;
+            padding-top: 50px;
+        }
+        
+        input {
+            height: 27px;
+            margin: 5px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            background-color: white;
+            padding: 5px;
+            font-size: 17px;
+            color: rgb(73, 73, 73);
+            text-align: center;
+        }
+        
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .options {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            font-style: italic;
+        }
+        
+     
+        
+        button {
+            margin: 20px auto;
+            font-size: 20px;
+            background-color: rgb(10, 51, 98);
+            color: white;
+            padding: 10px 45px;
+            border-radius: 18px;
+            box-shadow: 0 0 2px rgb(117, 113, 113);
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: rgba(0, 81, 255, 0.781);
+        }
+        #registration-form{
+            display: none;
+        }
+        .tnc{
+            display: flex;
+            align-items: center;
+            margin: auto;
+            color: rgb(54, 52, 52);
+            font-style: italic;
+        }
+        body{
+    background-color: #f0d9cb;
+}
+        
+        /* making design responsive */
+        
+        @media screen and (max-width:600px) {
+            .container {
+                width: 90%;
+            }
+            .menu{
+    margin-left: 20%;
+    margin-right: 10%;
+    color: white;
+    
+}
+nav img{
+    width: 75px;
+    height: 75px;
+}
+.sidenav{
+width: 0%;
+margin-left: 0px;
+margin-top: 80px;
+}
+        }
+        
+        @media screen and (max-width:350px) {
+            .container {
+                width: 320px;
+            }
+        }
+
+    </style>
+    <script>
+        function validate(){
+            var Email=document.login.email.value;
+            var password=document.login.password.value;
+            var x=document.login.email.value;
+            var atposition=x.indexOf("@");
+            var dotposition=x.lastIndexOf(".");
+            /*if(Email=""||Email=null)
+            {
+                
+                alert("enter your email or mobile no");
+            }
+            else */
+            if(atposition<1 || dotposition<atposition+2 ||dotposition+2>=x.length)
+                {
+                 alert("please enter a valid email address \n atposition:"+atposition+"\n dotposition:"+dotposition);
+                 return false;
+                 }
+            else if(password.length<8)
+            {
+                alert("password must contains 8 digits");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <img src="logo.png">
+        <a href="">MGK BANGLES</a>         
+        <div class="menu">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="offers.html">Offers</a>
+            <a href="Blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()" >&#9776; </span>
+        </div>
+    </nav>
+    
+
+    <div class="container">
+
+        <div class="tabs">
+            <h2 class="reg-tab">Register</h2>
+            <h2 class="login-tab">Login</h2>
+        </div>
+        <!-- login part -->
+        <div id="login-form">
+            <form name="login" method="post" action="D:\BANGLES\login.html" onsubmit="return validate()">
+                <input type="text" name="Email id" id="Email" placeholder="username">
+                <input type="password" name="password" id="password" placeholder="password">
+                <div class="options">
+                
+                    <a href="#">Forget Password ?</a>
+                </div>
+                <input type="submit" value="Login" style="width: 100%; background-color: green; color: black;">
+            </form>
+        </div>
+        <!-- Lets add registration form -->
+        <div id="registration-form">
+            <form name="register" method="post" action="#" onsubmit="return validate()" >
+                <input type="text" name="username" id="username" placeholder="Enter Username">
+                <input type="email" name="email" id="Email" placeholder="Enter Email">
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+                <input type="password" name="confirm-pass" id="conform-pass" placeholder="Confirm Password">
+                <div class="tnc">
+                    <input type="checkbox" name="accept" id="accept">
+                    <p>I accept the <a href="#">Terms & Conditions</a></p>
+                </div>
+                <input type="submit" style="width: 100%; background-color: green; color: black;">
+            </form>
+        </div>
+
+    </div>
+    <script>
+        function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+    <!-- lets use some javascript to make these tabs to work -->
+    <script>
+        const reg_form = document.querySelector("#registration-form");
+        const login_form = document.querySelector("#login-form");
+
+        const reg_tab = document.querySelector('.reg-tab');
+        const login_tab = document.querySelector('.login-tab');
+
+        reg_tab.addEventListener('click',e=>{
+            login_form.style.display = 'none';
+            reg_form.style.display = 'block';
+            reg_tab.classList.add('active');
+            login_tab.classList.remove('active')
+        })
+        login_tab.addEventListener('click',e=>{
+            reg_form.style.display = 'none';
+            login_form.style.display = 'block';
+            reg_tab.classList.remove('active');
+            login_tab.classList.add('active')
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif
+}
+nav{
+    position: sticky;
+    background-color:#41092b;
+    color:white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin:0%;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+body{
+    background-color: #f0d9cb;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+}
+.sidenav {
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #41092b;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-left: 82%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: red;
+  background-color: white;
+}
+
+.sidenav .closebtn a:hover{
+color: white;
+background-color: red;
+}
+.sidenav .closebtn {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+
+}
+.Search{
+    display: none;
+}
+
+
+  .menu{
+      margin-left: 10%;
+  }
+      
+  nav a{
+      color: white;
+      font-size: 26px;
+      font-family: 'Times New Roman', Times, serif;
+      text-decoration: none;
+      margin-left: 10%;
+    
+  
+  }
+  nav .navbar{
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+nav .form{
+    align-items: center;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+    font-size: 26px;
+    color: white;
+    padding-right: 10px;
+
+}
+
+nav .signin{
+    padding-right: 50px;
+    width: 110px;
+    height: 40px;
+    margin-left: 10%;
+}
+
+nav .form  form input{
+    align-items: center;
+
+}
+nav button{
+    background-color:white;
+    color: #41092b;
+    font-size: 20px;
+    padding: 8px 8px 8px 8px;
+    border-radius: 8px;
+}
+nav .logo{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.product{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.product-category{
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+.product-container{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar{
+    display: none;
+}
+
+.product-card{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+}
+
+.product-image{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-thumb{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.discount-tag{
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn{
+    opacity: 1;
+}
+
+.card-btn:hover{
+    background: #efefef;
+}
+
+.product-info{
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.product-brand{
+    text-transform: uppercase;
+}
+
+.product-short-des{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.price{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price{
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.pre-btn, .nxt-btn{
+    border: none;
+    width: 30px;
+    height: 10%;
+    margin-top: 40%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn{
+    right: 0;
+}
+
+.pre-btn img, .nxt-btn img{
+    opacity: 0.4;
+}
+
+.pre-btn:hover img, .nxt-btn:hover img{
+    opacity: 2;
+}
+.ads{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
+    justify-content: center;
+
+}
+.ads img{
+    width: 800px;
+    height: 280px;
+    padding-right: 10px;
+    justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+    .menu{
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    
+}
+nav img{
+    width: 75px;
+    height: 75px;
+}
+.sidenav{
+width: 0%;
+margin-left: 0px;
+margin-top: 80px;
+}
+nav .form{
+    display: none;
+}
+nav .signin{
+    padding-right: 0px;
+    width: 110px;
+    height: 40px;
+    margin-left: 10%;
+}
+.container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.pre-btn, .nxt-btn{
+    margin-top: 115%;
+}
+.Search{
+    display: contents;
+    
+}
+.Search img{
+    margin-left: 35%;
+    width: 50px;
+    height: 50px;
+}
+
+.searchnav {
+    height: 50%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#f0d9cb;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-left: 0%;
+  }
+  
+  .searchnav  .form {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    
+  }
+  
+  .searchnav a:hover {
+    color: red;
+    background-color: white;
+  }
+  
+  .searchnav .closebtn {
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+  
+  }
+}

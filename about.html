@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+    position: sticky;
+    background-color:#41092b;
+    color:white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin:0%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    
+    padding: 0;
+    border: 5px;
+    border-color: black;
+}
+body{
+    background-color: #f0d9cb;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+}
+.sidenav {
+    
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #41092b;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-left: 82%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: red;
+  background-color: white;
+}
+
+.sidenav .closebtn a:hover{
+color: white;
+background-color: red;
+}
+.sidenav .closebtn {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+
+}
+.menu{
+    margin-left: 70%;
+}
+    
+nav a{
+    color: white;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-left: 3%;
+
+}
+nav .navbar{
+    cursor: pointer;
+    display: none;
+}
+        p{
+            font-size: 28px;
+            text-align: justify;
+        }
+        .about{
+            margin-top: 25px;
+            margin-left: 12%;
+            margin-right: 12%;
+        }
+        .heading{
+            text-align: center;
+            font-size: 32px;
+        }
+       .content{
+            font-size: 32px;
+        }
+        @media only screen and (max-width: 600px) {
+    .menu{
+    margin-left: 20%;
+    margin-right: 10%;
+    color: white;
+    
+}
+nav img{
+    width: 75px;
+    height: 75px;
+}
+.sidenav{
+width: 0%;
+margin-left: 0px;
+margin-top: 110px;
+}
+p{
+            font-size: 16px;
+        }
+            .content, .heading{
+            font-size: 18px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.png">
+        <a href="">MGK BANGLES</a>         
+        <div class="menu">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="offers.html">Offers</a>
+            <a href="Blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer; color: white" onclick="openNav()" >&#9776; </span>
+        </div>
+    </nav>
+
+    <div class="about">
+        <div class="about-us">
+           <h2 class="heading" style="align-items: center;"> <b>Creating dreams about us</b></h2>
+
+           <h2 class="content">MGK Bangles Mayiladuthurai :</h2>
+            
+             <p>     At MGK, we are driven by a passion for silk thread bangles. Founded on September 3, 2023, 
+we have been dedicated to meeting customer needs, creating new designs for customers, and satisfying them! MGK, meaning 
+Muzzia,Gaja Lakshmi, and Kittu, is our small, homegrown brand that emerged from a spark of creativity and determination.
+Founded by Kiruthika, we transformed a corner of our home into a haven of handcrafting.</p>
+            
+             <p>Each item bearing our name is a testament to resilience, creativity, and the human spirit. Our artisans infuse their 
+hearts and souls into every piece, resulting in products that are not just beautiful but also carry a unique story. 
+Challenges have been our stepping stones, making us stronger and more passionate about our craft. 
+We invite you to be a part of our journey, to invest in art, and to experience the magic of handcrafted beauty.</p>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+    
+</body>
+</html>

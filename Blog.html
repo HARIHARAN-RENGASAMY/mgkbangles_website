@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         nav{
+    position: sticky;
+    background-color:#41092b;
+    color:white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin:0%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    
+    padding: 0;
+    border: 5px;
+    border-color: black;
+}
+body{
+    background-color: #f0d9cb;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #41092b;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-left: 82%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: red;
+  background-color: white;
+}
+
+.sidenav .closebtn a:hover{
+color: white;
+background-color: red;
+}
+.sidenav .closebtn {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+
+}
+.menu{
+    margin-left: 70%;
+}
+    
+nav a{
+    color: white;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-left: 3%;
+
+}
+nav .navbar{
+    cursor: pointer;
+    display: none;
+}
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+            margin-top: 30px;
+
+        }
+       .blog{
+        border-style: solid;
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+        height: 250px;
+        padding-bottom: 15px;
+            }
+        .blog_container img{
+            width: 250px;
+            height: 250px;
+
+        }
+        .blog_des button{
+            font-size: 24px;
+            align-items: center;
+            margin-left: 40%;
+            background-color: rgb(64, 174, 207);
+        }
+        .blog_des button:hover{
+            color:white;
+            background-color: green;
+        }
+        @media only screen and (max-width: 600px) {
+    .menu{
+    margin-left: 20%;
+    margin-right: 10%;
+    color: white;
+    
+}
+nav img{
+    width: 75px;
+    height: 75px;
+}
+.sidenav{
+width: 0%;
+margin-left: 0px;
+margin-top: 80px;
+}
+.main{
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+
+        }
+.blog{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+    height: fit-content;
+}
+p{font-size: 16px;}
+.blog_container img{
+    margin-top: 20px;
+    margin-left: 40%;
+            width: 100px;
+            height: 100px;
+
+        }
+        .blog_container {
+            align-items: center;
+        }
+    p{width: 100%;
+    text-align: justify;}}
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.png">
+        <a href="">MGK BANGLES</a>         
+        <div class="menu">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="offers.html">Offers</a>
+            <a href="Blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()" >&#9776; </span>
+        </div>
+    </nav>
+    
+    
+    <div class="main">
+    <div class="blog">
+    <div class="blog_container">
+         <img src="blog.png"/>
+    </div>
+    <div class="blog_des" style="padding-left: 20px;">
+        <h2>"Thread Bangles: A Splash of Color and Tradition"</h2>
+        <h4>Introduction:</h4>
+        <p>
+            Thread bangles, also known as "threaded bangles" or "silk thread bangles," 
+            are a vibrant and charming accessory that has been adorning the wrists of women across cultures for generations. 
+            These intricately designed bangles are a testament to the rich tapestry of traditions and craftsmanship that have endured over time.
+             In this blog, we'll delve into the history, craftsmanship, and modern trends of thread bangles.
+        </p>
+        <a href="https://threadbanglesmgk.blogspot.com/2023/10/thread-bangles.html"><button>Read Me</button></a>
+    </div></div>
+        <div class="blog">
+        <div class="blog_container">
+            <img src="product1 (7).jpeg"/>
+       </div>
+       <div class="blog_des" style="padding-left: 20px;">
+           <h2>"Thread Bangles: A Vibrant Reflection of Our Heritage"</h2>
+           <h4>Introduction:</h4>
+           <p>
+            In the world of fashion and jewelry, some accessories stand out not just for their beauty but also for their cultural significance.
+             One such accessory that holds a special place in the hearts of many is the thread bangle. These colorful and intricately designed bracelets
+              are more than just ornaments; they are a vibrant reflection of our rich heritage and traditions.
+             In this blog post, we'll delve into the fascinating world of thread bangles and explore their historical and cultural importance.
+           </p>
+           <a href="https://mgkbanglesmayiladuthurai.blogspot.com/2023/10/thread-bangles-vibrant-reflection-of.html"><button>Read Me</button></a>
+    </div>
+</div></div>
+
+
+<script>
+    function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>

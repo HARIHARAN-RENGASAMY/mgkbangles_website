@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+        h2{
+            align-items: center;
+            color: blue;
+        }
+        
+        .main{
+            display: flex;
+            flex-direction: row;
+        }
+        .main img{
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+
+        }
+        nav{
+    position: sticky;
+    background-color:#41092b;
+    color:white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin:0%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 0px;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #41092b;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-left: 82%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: red;
+  background-color: white;
+}
+
+.sidenav .closebtn a:hover{
+color: white;
+background-color: red;
+}
+.sidenav .closebtn {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+
+}
+.menu{
+    margin-left: 70%;
+    color: white;
+}
+body{
+    background-color: #f0d9cb;
+}
+    
+nav a{
+    color: white;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-left: 3%;
+
+}
+nav .navbar{
+    cursor: pointer;
+    display: none;
+}
+.con-card{
+    width: 200px;
+    height: 150px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    background-color: #f0d9cb;
+    border-radius: 30px;
+
+}
+.con-card img{
+    border-radius: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .menu{
+    margin-left: 20%;
+    margin-right: 10%;
+    color: white;
+    
+}
+nav img{
+    width: 75px;
+    height: 75px;
+}
+.sidenav{
+width: 0%;
+margin-left: 0px;
+margin-top: 80px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    
+}
+.con-card{
+    height: fit-content;
+}
+.con-card img{
+    width: 50px;
+    height: 50px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.png">
+        <a href="">MGK BANGLES</a>         
+        <div class="menu">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="offers.html">Offers</a>
+            <a href="Blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()" >&#9776; </span>
+        </div>
+    </nav>
+    <h2 style="text-align: center;">CONTACT US</h2>
+    <div class="main">
+    
+        <div class="con-card">
+            <a href="9442455147"><img src="call.png"/></a><br>
+            <p>Mobile:9442455147</p>
+        </div>
+        <div class="con-card">
+            <a href="https://instagram.com/mgk_bangles?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img src="insta.jpg"/></a>
+            <p>@mgk_bangles</p>
+        </div>
+        <div class="con-card">
+            <a href="9442455147"><img src="whatsapp.png"/></a>
+            <p>whatsapp:9442455147</p>
+        </div>
+        <div class="con-card" style="width: 300px;">
+            <a href="mailto:mgkbanglesmayiladuthurai33@gmail.com"><img src="mail.png"/></a>
+            <p style=" font-size: 16px;">mgkbanglesmayiladuthurai33@gmail.com</p>
+        </div>
+        <div class="con-card" style="display: flex; align-items: center;">
+                <a href="https://maps.app.goo.gl/3yBXnbhgZoAfup4j9"><img src="address.jpg"/></a>
+                <p style="width: 200px; ">@mgk_bangles 4/348,Gandhiji st,Mayiladuthurai-609 001</p>
+        </div>
+    </div>
+
+
+            <script>
+                function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
+            </script>
+</body>
+</html>
